@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Document</title>
+</head>
+<body>
+    
+
+<header>
+    <nav id="Nav">
+      <ul>
+        <li><a href="http://example.com/?1" id="item01">Home</a></li>
+        <li class="selected">
+          <a href="http://example.com/?2" id="Item02" aria-current="page">About</a>
+          <button type="button" id="btnItem02" aria-controls="SubItem02" aria-expanded="false" aria-labelledby="Item02" onclick="toggleSubNav(this.id);">
+          <svg xmlns="http://www.w3.org/2000/svg&quot;" viewBox="0 0 80 80" focusable="false"><path d="M70.3 13.8L40 66.3 9.7 13.8z"></path></svg>
+            </button>
+          <ul id="SubItem02" style="display:none;">
+            <li><a href="http://example.com/?2a">Our Team</a></li>
+            <li><a href="http://example.com/?2b">Press</a></li>
+            <li><a href="http://example.com/?2c">Contact</a></li>
+            <li><a href="http://example.com/?2d" aria-current="page">Job Postings</a></li>
+          </ul>
+        </li>
+        <li><a href="http://example.com/?3" id="Item03">Blog</a></li>
+        <li><a href="http://example.com/?4" id="Item04">Services</a>
+          <button type="button" id="btnItem04" aria-controls="SubItem04" aria-expanded="false" aria-labelledby="Item04" onclick="toggleSubNav(this.id);">
+          <svg xmlns="http://www.w3.org/2000/svg&quot;" viewBox="0 0 80 80" focusable="false"><path d="M70.3 13.8L40 66.3 9.7 13.8z"></path></svg>
+            </button>
+          <ul id="SubItem04" style="display:none;">
+            <li><a href="http://example.com/?4a">Management Consulting</a></li>
+            <li><a href="http://example.com/?4b">Training</a></li>
+            <li><a href="http://example.com/?4c">Financial Audits</a></li>
+            <li><a href="http://example.com/?4d">Expert Witness</a></li>
+            <li><a href="http://example.com/?4e">Localization</a></li>
+            <li><a href="http://example.com/?4f">Writing Very Nasty Letters</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="http://example.com/?5" id="Item05">Products</a>
+          <button type="button" id="btnItem05" aria-controls="SubItem05" aria-expanded="false" aria-labelledby="Item05" onclick="toggleSubNav(this.id);">
+          <svg xmlns="http://www.w3.org/2000/svg&quot;" viewBox="0 0 80 80" focusable="false"><path d="M70.3 13.8L40 66.3 9.7 13.8z"></path></svg>
+            </button>
+          <ul id="SubItem05" style="display:none;">
+            <li><a href="http://example.com/?5a">Content Management Systems</a></li>
+            <li><a href="http://example.com/?5b">Translation Management Software</a></li>
+            <li><a href="http://example.com/?5c">Dessert Topping</a></li>
+            <li><a href="http://example.com/?5d">Floor Wax</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="http://example.com/?6" id="Item06">Events</a>
+          <button type="button" id="btnItem06" aria-controls="SubItem06" aria-expanded="false" aria-labelledby="Item06" onclick="toggleSubNav(this.id);">
+          <svg xmlns="http://www.w3.org/2000/svg&quot;" viewBox="0 0 80 80" focusable="false"><path d="M70.3 13.8L40 66.3 9.7 13.8z"></path></svg>
+            </button>
+          <ul id="SubItem06" style="display:none;">
+            <li><a href="http://example.com/?6a">Press Events</a></li>
+            <li><a href="http://example.com/?6b">Conferences</a></li>
+            <li><a href="http://example.com/?6c">Workshops</a></li>
+            <li><a href="http://example.com/?6d">Algonquinpalooza</a></li>
+          </ul>
+        </li>
+        <li><a href="http://example.com/?7" id="Item07">Contact</a>
+          <button type="button" id="btnItem07" aria-controls="SubItem07" aria-expanded="false" aria-labelledby="Item07" onclick="toggleSubNav(this.id);">
+          <svg xmlns="http://www.w3.org/2000/svg&quot;" viewBox="0 0 80 80" focusable="false"><path d="M70.3 13.8L40 66.3 9.7 13.8z"></path></svg>
+            </button>
+          <ul id="SubItem07" style="display:none;">
+            <li><a href="http://example.com/?7a">Phone</a></li>
+            <li><a href="http://example.com/?7b">Mailing Address</a></li>
+            <li><a href="http://example.com/?7c">Summoning Circles</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Navigation</h1>
+    <p>
+      Prototype navigation pattern. Read more in my blog post <a href="http://adrianroselli.com/2019/06/link-disclosure-widget-navigation.html"><cite>Link + Disclosure Widget Navigation</cite></a>.
+    </p>
+  </main>
+<script src="script.js"></script>
+</body>
+</html>

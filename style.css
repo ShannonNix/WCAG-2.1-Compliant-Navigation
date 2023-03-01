@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  background-color: #eeeeee;
+  font-size: 100%;
+  color: #333;
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+header,
+nav,
+main {
+  display: block;
+  box-sizing: border-box;
+  width: auto;
+  padding: 1em 1vw;
+  margin: 1em 1vw;
+  color: #000;
+}
+
+header,
+nav {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  margin-top: 0.5em;
+  background-color: #ddd;
+  font-size: 90%;
+}
+
+nav ul,
+nav li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav > ul {
+  display: flex;
+  flex-wrap: no-wrap; /* RWD */
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+nav > ul > li {
+  flex: 1 1 auto; /* RWD */
+  margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 0 1em;
+  border-right: 0.1em solid #ccc;
+  border-bottom: 0.1em solid #ccc;
+  position: relative;
+}
+
+nav > ul > li:first-child {
+  border-left: 0.1em solid #ccc;
+}
+
+nav > ul > li > a {
+  padding: 1em 0;
+  text-align: center;
+}
+
+nav > ul > li > * {
+  flex: 1 1 auto;
+  box-sizing: border-box;
+}
+
+nav > ul > li > button {
+  flex: 0 0 1em;
+  border: 0.15em solid #000;
+  border-radius: 50%;
+  line-height: 0;
+  outline: none;
+  text-align: center;
+  padding: 0.15em 0.15em 0.05em 0.15em;
+  margin: 1.1em 1em 0 1em;
+}
+
+nav > ul > li > a + button svg {
+  width: 1em;
+  height: 1em;
+  fill: #000;
+  transition: transform 0.25s ease-in;
+  transform-origin: center 45%;
+}
+
+button[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+nav > ul li > ul {
+  position: absolute;
+  top: 100%;
+  left: -0.1em;
+  right: -0.5em;
+  width: auto;
+  min-width: 12em;
+  height: auto;
+  overflow: visible;
+  z-index: 10;
+  margin: 0;
+  padding: 1em 0;
+  border: 0.01em solid transparent;
+}
+
+nav > ul ul a {
+  display: block;
+  font-size: 95%;
+  margin: 0;
+  padding: 0.5em 1.3em;
+}
+
+nav > ul ul a:hover,
+nav > ul ul a:focus {
+  background-color: #ccc;
+}
+
+@media screen and (min-width: 60em) {
+  /* At arbitrary desktop width, keep right menu from going out of viewport */
+  nav > ul li:last-child > ul {
+    left: auto;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 60em) {
+  body {
+    background-color: #ffe;
+  }
+  nav > ul {
+    /* Has to happen in a max-width MQ */
+    /* Sorry, no mobile-first in this case */
+    flex-wrap: wrap; /* RWD */
+  }
+  nav > ul > li {
+    border-right: 0.05em solid #ccc;
+    border-left: 0.05em solid #ccc;
+  }
+  nav > ul > li:first-child {
+    border-left-width: 0.05em;
+  }
+  nav > ul li > ul {
+    right: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) {
+  nav {
+    border-top: 0.1em solid windowText;
+  }
+}
+
+/* Colors */
+
+nav,
+nav ul,
+nav button,
+nav > ul ul a:hover,
+nav > ul ul a:focus {
+  background-color: #013461;
+}
+
+nav a,
+nav a:link,
+nav a:visited,
+nav a:hover,
+nav a:focus,
+nav a:active {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+}
+
+nav > ul > li > a + button svg {
+  fill: #fff;
+}
+
+nav > ul > li,
+nav > ul > li > button,
+nav > ul > li:first-child {
+  border-color: #0f5f8c;
+}
+
+nav > ul > li > button:hover,
+nav > ul > li > button:focus {
+  border-color: #fff;
+}
+
+nav > ul > li:hover,
+nav > ul > li > a:hover,
+nav > ul > li > a:focus,
+nav > ul li > ul {
+  background-color: #005c90;
+}
+
+nav > ul > li:focus-within {
+  /* Keep separate for IE11 */
+  background-color: #005c90;
+}
+
+nav > ul > li a[aria-current="page"],
+nav > ul > li:hover a[aria-current="page"],
+nav > ul > li:focus a[aria-current="page"],
+nav > ul > li.selected,
+nav > ul > li.selected:hover {
+  background-color: #187aba;
+  border-color: #187aba;
+}
